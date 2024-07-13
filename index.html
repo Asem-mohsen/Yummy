@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/all.min.css">
+    <link href="./Css/output.css" rel="stylesheet">
+    <link href="./Css/style.css" rel="stylesheet">
+    
+    <title>Yummy</title>
+</head>
+<body>
+
+    <div id="loader-wrapper">
+        <div id="loader" class="loader"></div>
+    </div>
+
+    <div class="flex">
+        <aside>
+            <div class="side-bar flex fixed top-0 h-[100%]" id="sideMenu">
+                <div class="nav-tabs flex justify-between bg-[#242424] text-white p-5 flex-col" >
+                    <div class="links">
+                        <ul class="list-unstyled overflow-hidden" id="navLinks">
+                            <li onclick="showSearchInputs(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 0px;">Search</li>
+                            <li onclick="getCategories(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 0px;">Categories</li>
+                            <li onclick="getArea(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 0px;">Area</li>
+                            <li onclick="getIngredients(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 0px;">Ingredients</li>
+                            <li onclick="showContacts(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 0px;">Contact Us</li>
+                        </ul>
+                    </div>
+                    <div class="nav-footer">
+                        <div class="icons">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <div class="footer">
+                            <p>Copyrights 2024 All Rights <br>Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-header flex justify-between pl-3 flex-col bg-white items-center">
+                    <img src="./imgs/logo.png" width="60" alt="Logo">
+                    <i class="fa-solid fa-bars burger-icon cursor-pointer" onclick="toggleSideNav()"></i>
+                    <i class="fa-solid fa-x close-icon cursor-pointer" onclick="toggleSideNav()" style="display: none;"></i>
+                    <div class="flex flex-col">
+                        <i class="fa-solid cursor-pointer fa-globe"></i>
+                        <i class="fa-solid cursor-pointer fa-share-nodes"></i>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <section>
+            <div class="container m-5 block w-fit">
+                <div class="row flex flex-wrap justify-center gap-5" id="boxes">
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="./Js/jquery.js"></script>
+    <script src="./Js/main.js"></script>
+</body>
+</html>
